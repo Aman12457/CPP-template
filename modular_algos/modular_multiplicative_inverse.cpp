@@ -1,5 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
 
 int extended_euclidean(int a, int b, int &x, int &y)
 {
@@ -14,20 +12,16 @@ int extended_euclidean(int a, int b, int &x, int &y)
     }
     return a1;
 };
-// ax+my=1
-int main()
+int a = 2, m = 5;
+int x = 0, y = 0;
+int g = extended_euclidean(a, m, x, y);
+ if (g != 1)
+ {
+    cout << "No solution!";
+ }
+else
 {
-    int a = 2, m = 5;
-    int x = 0, y = 0;
-    int g = extended_euclidean(a, m, x, y);
-    if (g != 1)
-    {
-        cout << "No solution!";
-    }
-    else
-    {
-        x = (x % m + m) % m;
-        cout << x << endl;
-    }
-    return 0;
-};
+     x = (x % m + m) % m;
+     cout << x << endl;
+}
+
